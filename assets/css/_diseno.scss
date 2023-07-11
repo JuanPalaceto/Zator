@@ -206,6 +206,23 @@
     }
 }
 
+.diseno-obras {
+    background-color: #0a0a0a;
+}
+
+.diseno-obras-videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-evenly;
+    & div {
+        max-width: 400px;
+    }
+    & img {
+        width: 100%;
+    }
+}
+
 @media screen and (min-width:568px) {
     .diseno-header-container {
         & img {
@@ -379,7 +396,7 @@
         &-inicio {
             gap: 2rem;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-evenly;
             &-card {
                 flex-basis: 350px;
                 min-width: 350px;

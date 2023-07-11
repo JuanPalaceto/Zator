@@ -372,6 +372,23 @@
   transition: all 0.3s ease-in-out;
 }
 
+.diseno-obras {
+  background-color: #0a0a0a;
+}
+
+.diseno-obras-videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-evenly;
+}
+.diseno-obras-videos div {
+  max-width: 400px;
+}
+.diseno-obras-videos img {
+  width: 100%;
+}
+
 @media screen and (min-width: 568px) {
   .diseno-header-container img:nth-child(4) {
     bottom: 6.5%;
@@ -574,7 +591,7 @@
   .diseno-pasos-inicio {
     gap: 2rem;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
   }
   .diseno-pasos-inicio-card {
     flex-basis: 350px;
