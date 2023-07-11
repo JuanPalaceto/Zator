@@ -53,6 +53,7 @@ function handleMouseEnter(video) {
 function handleMouseLeave(video) {
   video.removeEventListener("ended", handleMouseEnter);
   stopPreview(video);
+  video.load(); //No me convence pero funciona
 }
 
 videos.forEach((video) => {
