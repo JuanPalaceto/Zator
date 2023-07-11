@@ -1,0 +1,157 @@
+@mixin contacto-btn($color, $border-color, $background, $background-hover, $color-hover: inherit, $border-hover: $background-hover) {
+    background-color: $background;
+    border: 2px solid $border-color;
+    border-radius: 10px;
+    color: $color;
+    display: inline-block;
+    min-width: 160px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease-in;
+    &:hover {
+        border-color: $border-hover;
+        background-color: $background-hover;
+        color: $color-hover;
+        font-weight: inherit;
+    }
+}
+
+.main-contacto {
+    background-color: $color_17;
+}
+
+.contacto {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-areas: "hablemos"
+                         "form"
+                         "visitanos";
+    &-hablemos {
+        grid-area: hablemos;
+        margin-top: 3rem;
+    }
+    &-form {
+        grid-area: form;
+    }
+    &-visitanos {
+        grid-area: visitanos;
+    }
+}
+
+.contacto-hablemos {
+    color: $color_5;
+}
+
+.contacto-hablemos-texto {
+    & h2 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    & p {
+        line-height: 2rem;
+    }
+}
+
+.contacto-hablemos-botones {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 600;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    & span {
+        font-size: 0.8rem;
+    }
+    & p {
+        margin: 0;
+    }
+    & a:first-child {
+        @include contacto-btn(#fff,#2664ff,#2664ff, #0548fe) ;
+    }
+    & a:last-child {
+        @include contacto-btn(#fff,#fff, transparent, #fff, #000);
+        & span {
+            color: #8a8a8a;
+        }
+    }
+}
+
+.contacto-visitanos {
+    & p{
+        color: #a8a8a8;
+        padding-left: 1.5rem;
+        margin: 0;
+        line-height: 1.75rem;
+    }
+    & p:first-child {
+        color: #fff;
+        font-weight: 600;
+        position: relative;
+        
+        &::before {
+            content: "\F285";
+            font-family: 'bootstrap-icons';
+            font-size: 0.8rem;
+            left: 0;
+            position: absolute;
+            top: 2px;
+        }
+    }
+    & iframe {
+        margin-top: 2rem;
+        border-radius: 25px;
+        height: 300px;
+    }
+}
+
+.contacto-form {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 3rem 2.5rem;
+    & h3 {
+        color: #000;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    & p {
+        line-height: 2rem;
+    }
+    & form {
+        & label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            &::after {
+                color: #ff0000;
+                content: " *";
+            }
+        }
+        & input {
+            padding: 0.8rem 1.5rem;
+        }
+        & textarea {
+            margin-bottom: 1.5rem;
+            padding: 0.8rem 1.5rem;
+            resize: none;
+        }
+        & button {
+            @include contacto-btn(#fff, #2664ff, #2664ff, #0548fe, #fff)
+        }
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .contacto {
+        grid-gap: 5rem;
+        grid-template-areas: "hablemos form"
+                             "visitanos form";
+        padding-top: 8rem;
+        row-gap: 0;
+        &-hablemos {
+            margin: 0;
+        }
+        &-visitanos {
+            & iframe {
+                height: 350px;
+            }
+        }
+    }
+}
+
