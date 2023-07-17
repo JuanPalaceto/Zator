@@ -638,6 +638,10 @@
     grid-area: foto9;
   }
 }
+@font-face {
+  font-family: "Cambridge Serial";
+  src: url("../fonts/cambridge-serial-bold.ttf") format("truetype");
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -1639,6 +1643,7 @@ h6 {
 }
 #header .logo {
   font-size: 32px;
+  font-family: "Cambridge Serial", sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
   line-height: 1;
@@ -2670,11 +2675,12 @@ section {
   margin-bottom: 30px;
 }
 #footer .footer-top .footer-info h3 {
+  font-family: "Cambridge Serial", sans-serif;
   font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
   margin: 0 0 15px 0;
   padding: 2px 0 2px 0;
-  line-height: 1;
-  font-weight: 700;
 }
 #footer .footer-top .footer-info p {
   font-size: 14px;
