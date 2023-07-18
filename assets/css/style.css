@@ -200,7 +200,11 @@
   text-align: center;
   z-index: 2;
 }
+.diseno-header-bloque img:first-child {
+  max-width: 150px;
+}
 .diseno-header-bloque h2 {
+  display: none;
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
@@ -390,6 +394,21 @@
 }
 
 @media screen and (min-width: 568px) {
+  .diseno-header-bloque img:first-child {
+    display: none;
+  }
+  .diseno-header-bloque h2 {
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
+    height: 280px;
+    line-height: 4rem;
+  }
+  .diseno-header-bloque h2::before {
+    content: url("../img/logos/Zator.jpg");
+    padding-left: 2rem;
+    transform: scale(0.7);
+  }
   .diseno-header-container img:nth-child(4) {
     bottom: 6.5%;
     display: block;
@@ -638,6 +657,94 @@
     grid-area: foto9;
   }
 }
+.inmobiliaria-header {
+  background: rgb(252, 252, 4);
+  background: linear-gradient(0deg, rgb(252, 252, 4) 0%, rgb(95, 95, 2) 15%, #000 25%);
+  z-index: 2;
+}
+
+.inmobiliaria-header-bloque {
+  color: #fff;
+  padding: 0 1rem 6rem;
+  text-align: center;
+}
+.inmobiliaria-header-bloque h2 {
+  display: none;
+}
+.inmobiliaria-header-bloque p {
+  font-weight: 500;
+}
+.inmobiliaria-header-bloque a {
+  background-color: #fcfc04;
+  border: 1px solid #fcfc04;
+  border-radius: 50px;
+  color: #000;
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.inmobiliaria-header-bloque a:hover {
+  background-color: transparent;
+  border: 1px solid #fcfc04;
+  color: #fcfc04;
+  font-weight: 600;
+}
+
+.inmobiliaria-logo {
+  padding: 2.5rem 0;
+  position: relative;
+  text-align: center;
+}
+.inmobiliaria-logo img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 12px 6px #fcfc04;
+  -webkit-box-shadow: 0px 0px 12px 6px #fcfc04;
+  -moz-box-shadow: 0px 0px 12px 6px #fcfc04;
+}
+
+.inmobiliaria-casas {
+  background-color: #000;
+}
+
+.inmobiliaria-casas-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "casa1 casa2" "casa3 casa3" "casa3 casa3";
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(1) {
+  grid-area: casa1;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(1) img {
+  width: 100%;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(2) {
+  grid-area: casa2;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(2) img {
+  width: 100%;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(3) {
+  grid-area: casa3;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(3) img {
+  width: 100%;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(4) {
+  display: none;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(5) {
+  display: none;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(6) {
+  display: none;
+}
+
+.inmobiliaria-terrenos {
+  background-color: #0a0a0a;
+}
+
 @font-face {
   font-family: "Cambridge Serial";
   src: url("../fonts/cambridge-serial-bold.ttf") format("truetype");

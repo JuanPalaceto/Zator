@@ -1,0 +1,112 @@
+$main-color: #fcfc04;
+$secondary-color: #000;
+// $secondary-color: #012B62;
+$alternative-color: #fff;
+
+.inmobiliaria-header {
+    background: rgb(252,252,4);
+    background: linear-gradient(0deg, rgba(252,252,4,1) 0%, rgba(95,95,2,1) 15%, $secondary-color 25%);
+    z-index: 2;
+}
+
+.inmobiliaria-header-bloque {
+    color: $alternative-color;
+    padding: 0 1rem 6rem;
+    text-align: center;
+    & h2 {
+        display: none;
+    }
+    & p {
+        font-weight: 500;
+    }
+    & a {
+        background-color: $main-color;
+        border: 1px solid $main-color;
+        border-radius: 50px;
+        color: $secondary-color;
+        display: inline-block;
+        font-weight: 600;
+        padding: 0.5rem 1.5rem;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background-color: transparent;
+            border: 1px solid $main-color;
+            color: $main-color;
+            font-weight: 600;
+        }
+    }
+}
+
+.inmobiliaria-logo {
+    padding: 2.5rem 0;
+    position: relative;
+    text-align: center;
+    // &::before {
+    //     box-shadow: 0px 0px 12px 6px $main-color;
+    //     -webkit-box-shadow: 0px 0px 12px 6px $main-color;
+    //     -moz-box-shadow: 0px 0px 12px 6px $main-color;
+    //     content: "";
+    //     display: block;
+    //     height: 50%;
+    //     left: 50%;
+    //     overflow: hidden;
+    //     position: absolute;
+    //     top: 50%;
+    //     transform: translate(-50%, -50%);
+    //     width: 50%;
+    // }
+    & img {
+        border-radius: 50%;
+        box-shadow: 0px 0px 12px 6px $main-color;
+        -webkit-box-shadow: 0px 0px 12px 6px $main-color;
+        -moz-box-shadow: 0px 0px 12px 6px $main-color;
+    }
+}
+
+.inmobiliaria-casas {
+    background-color: $secondary-color;
+}
+
+.inmobiliaria-casas-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "casa1 casa2"
+    "casa3 casa3"
+    "casa3 casa3";
+
+    & .inmobiliaria-casas-item {
+        &:nth-child(1) {
+            grid-area: casa1;
+            & img {
+                width: 100%;
+            }
+        }
+        &:nth-child(2) {
+            grid-area: casa2;
+            & img {
+                width: 100%;
+            }
+        }
+        &:nth-child(3) {
+            grid-area: casa3;
+            & img {
+                width: 100%;
+            }
+        }
+        &:nth-child(4) {
+            display: none;
+        }
+        &:nth-child(5) {
+            display: none;
+        }
+        &:nth-child(6) {
+            display: none;
+        }
+    }
+}
+
+.inmobiliaria-terrenos {
+    background-color: #0a0a0a;
+}
