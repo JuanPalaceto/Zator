@@ -200,7 +200,11 @@
   text-align: center;
   z-index: 2;
 }
+.diseno-header-bloque img:first-child {
+  max-width: 150px;
+}
 .diseno-header-bloque h2 {
+  display: none;
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
@@ -390,6 +394,21 @@
 }
 
 @media screen and (min-width: 568px) {
+  .diseno-header-bloque img:first-child {
+    display: none;
+  }
+  .diseno-header-bloque h2 {
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
+    height: 280px;
+    line-height: 4rem;
+  }
+  .diseno-header-bloque h2::before {
+    content: url("../img/logos/Zator.jpg");
+    padding-left: 2rem;
+    transform: scale(0.7);
+  }
   .diseno-header-container img:nth-child(4) {
     bottom: 6.5%;
     display: block;
@@ -636,6 +655,257 @@
   }
   .diseno-proyectos-lista:first-of-type > div .diseno-proyecto-item:nth-child(9) {
     grid-area: foto9;
+  }
+}
+.inmobiliaria-header {
+  background: rgb(252, 252, 4);
+  background: linear-gradient(0deg, rgb(252, 252, 4) 0%, rgb(95, 95, 2) 15%, #000 25%);
+}
+
+.inmobiliaria-header-bloque {
+  color: #fff;
+  padding: 0 1rem 6rem;
+  text-align: center;
+}
+.inmobiliaria-header-bloque h2 {
+  display: none;
+}
+.inmobiliaria-header-bloque p {
+  font-weight: 500;
+}
+.inmobiliaria-header-bloque a {
+  background-color: #fcfc04;
+  border: 1px solid #fcfc04;
+  border-radius: 50px;
+  color: #000;
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.inmobiliaria-header-bloque a:hover {
+  background-color: transparent;
+  border: 1px solid #fcfc04;
+  color: #fcfc04;
+  font-weight: 600;
+}
+
+.inmobiliaria-logo {
+  padding: 2.5rem 0;
+  position: relative;
+  text-align: center;
+}
+.inmobiliaria-logo img {
+  width: 50vw;
+  border-radius: 50%;
+  box-shadow: 0px 0px 12px 6px #fcfc04;
+  -webkit-box-shadow: 0px 0px 12px 6px #fcfc04;
+  -moz-box-shadow: 0px 0px 12px 6px #fcfc04;
+}
+.inmobiliaria-logo img:nth-child(2) {
+  display: none;
+}
+
+.inmobiliaria-casas {
+  background-color: #000;
+}
+
+.inmobiliaria-casas-cards {
+  display: grid;
+  grid-template-areas: "casa1 casa2" "casa3 casa3" "casa3 casa3";
+  grid-gap: 0.75rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item img {
+  width: 100%;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item p {
+  font-size: 0.825rem;
+  font-weight: 700;
+  margin: 0;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item p:nth-child(2) {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item div:nth-child(2) {
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.7rem;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(odd) div:nth-child(2) {
+  background-color: #012B62;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(even) div:nth-child(2) {
+  background-color: #b6b616;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(1) {
+  grid-area: casa1;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(2) {
+  grid-area: casa2;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(3) {
+  grid-area: casa3;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(4) {
+  display: none;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(5) {
+  display: none;
+}
+.inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(6) {
+  display: none;
+}
+
+.inmobiliaria-terrenos {
+  background-color: #0a0a0a;
+}
+
+.inmobiliaria-terrenos-cards {
+  display: grid;
+  grid-template-areas: "terreno1 terreno2" "terreno3 terreno3" "terreno3 terreno3";
+  grid-gap: 0.75rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+.inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item img {
+  width: 100%;
+}
+.inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item p {
+  font-size: 0.825rem;
+  font-weight: 700;
+  margin: 0;
+}
+.inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item p:nth-child(2) {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item div:nth-child(2) {
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.7rem;
+}
+.inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(odd) div:nth-child(2) {
+  background-color: #b6b616;
+}
+.inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(even) div:nth-child(2) {
+  background-color: #012B62;
+}
+.inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(1) {
+  grid-area: terreno1;
+}
+.inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(2) {
+  grid-area: terreno2;
+}
+.inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(3) {
+  grid-area: terreno3;
+}
+.inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(4) {
+  display: none;
+}
+.inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(5) {
+  display: none;
+}
+.inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(6) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .inmobiliaria-header-container {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 2rem 0.75rem min(40vw, 560px);
+  }
+  .inmobiliaria-header-container .inmobiliaria-header-bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem 0 0;
+    text-align: left;
+    margin-right: auto;
+  }
+  .inmobiliaria-header-container .inmobiliaria-header-bloque h2 {
+    display: block;
+    font-size: min(5vw, 70px);
+  }
+  .inmobiliaria-header-container .inmobiliaria-header-bloque p {
+    font-size: min(2.15vw, 30.5px);
+  }
+  .inmobiliaria-header-container .inmobiliaria-header-bloque a {
+    font-size: min(2.15vw, 30.5px);
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .inmobiliaria-header-container .inmobiliaria-logo {
+    padding: 0;
+    position: relative;
+    text-align: center;
+  }
+  .inmobiliaria-header-container .inmobiliaria-logo img {
+    max-width: 350px;
+    position: absolute;
+    right: min(22vw, 308px);
+    top: min(18vw, 252px);
+    width: 25vw;
+  }
+  .inmobiliaria-header-container .inmobiliaria-logo img:nth-child(2) {
+    display: block;
+    max-width: 420px;
+    top: 0;
+    right: 0;
+    width: 30vw;
+  }
+  .inmobiliaria-casas-cards {
+    grid-template-areas: "casa1 casa2 casa4 casa4" "casa3 casa3 casa4 casa4" "casa3 casa3 casa5 casa6";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+  .inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(1) {
+    grid-area: casa1;
+  }
+  .inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(2) {
+    grid-area: casa2;
+  }
+  .inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(3) {
+    grid-area: casa3;
+  }
+  .inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(4) {
+    display: grid;
+    grid-area: casa4;
+  }
+  .inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(5) {
+    display: grid;
+    grid-area: casa5;
+  }
+  .inmobiliaria-casas-cards .inmobiliaria-casas-item:nth-child(6) {
+    display: grid;
+    grid-area: casa6;
+  }
+  .inmobiliaria-terrenos-cards {
+    grid-template-areas: "terreno1 terreno2 terreno4 terreno4" "terreno3 terreno3 terreno4 terreno4" "terreno3 terreno3 terreno5 terreno6";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+  .inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(1) {
+    grid-area: terreno1;
+  }
+  .inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(2) {
+    grid-area: terreno2;
+  }
+  .inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(3) {
+    grid-area: terreno3;
+  }
+  .inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(4) {
+    display: grid;
+    grid-area: terreno4;
+  }
+  .inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(5) {
+    display: grid;
+    grid-area: terreno5;
+  }
+  .inmobiliaria-terrenos-cards .inmobiliaria-terrenos-item:nth-child(6) {
+    display: grid;
+    grid-area: terreno6;
   }
 }
 @font-face {

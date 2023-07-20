@@ -1,0 +1,302 @@
+$main-color: #fcfc04;
+$secondary-color: #000;
+$third-color: #012B62;
+$alternative-color: #fff;
+
+.inmobiliaria-header {
+    background: rgb(252,252,4);
+    background: linear-gradient(0deg, rgba(252,252,4,1) 0%, rgba(95,95,2,1) 15%, $secondary-color 25%);
+    // height: 100vh;
+}
+
+.inmobiliaria-header-bloque {
+    color: $alternative-color;
+    padding: 0 1rem 6rem;
+    text-align: center;
+    & h2 {
+        display: none;
+    }
+    & p {
+        font-weight: 500;
+    }
+    & a {
+        background-color: $main-color;
+        border: 1px solid $main-color;
+        border-radius: 50px;
+        color: $secondary-color;
+        display: inline-block;
+        font-weight: 600;
+        padding: 0.5rem 1.5rem;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background-color: transparent;
+            border: 1px solid $main-color;
+            color: $main-color;
+            font-weight: 600;
+        }
+    }
+}
+
+.inmobiliaria-logo {
+    padding: 2.5rem 0;
+    position: relative;
+    text-align: center;
+    // &::before {
+    //     box-shadow: 0px 0px 12px 6px $main-color;
+    //     -webkit-box-shadow: 0px 0px 12px 6px $main-color;
+    //     -moz-box-shadow: 0px 0px 12px 6px $main-color;
+    //     content: "";
+    //     display: block;
+    //     height: 50%;
+    //     left: 50%;
+    //     overflow: hidden;
+    //     position: absolute;
+    //     top: 50%;
+    //     transform: translate(-50%, -50%);
+    //     width: 50%;
+    // }
+    & img {
+        width: 50vw;
+        border-radius: 50%;
+        box-shadow: 0px 0px 12px 6px $main-color;
+        -webkit-box-shadow: 0px 0px 12px 6px $main-color;
+        -moz-box-shadow: 0px 0px 12px 6px $main-color;
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+.inmobiliaria-casas {
+    background-color: $secondary-color;
+}
+
+.inmobiliaria-casas-cards {
+    display: grid;
+    grid-template-areas:
+    "casa1 casa2"
+    "casa3 casa3"
+    "casa3 casa3";
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    & .inmobiliaria-casas-item {
+        & img {
+            width: 100%;
+        }
+        & p {
+            font-size: 0.825rem;
+            font-weight: 700;
+            margin: 0;
+            &:nth-child(2) {
+                font-size: 0.75rem;
+                font-weight: 500;
+            }
+        }
+        & div:nth-child(2) {
+            padding: 0.25rem 0.5rem;
+            margin-top: 0.7rem;
+        }
+        &:nth-child(odd){
+            & div:nth-child(2) {
+                background-color: $third-color;
+            }
+        }
+        &:nth-child(even){
+            & div:nth-child(2) {
+                background-color: #b6b616;
+            }
+        }
+        &:nth-child(1) {
+            grid-area: casa1;
+        }
+        &:nth-child(2) {
+            grid-area: casa2;
+        }
+        &:nth-child(3) {
+            grid-area: casa3;
+        }
+        &:nth-child(4) {
+            display: none;
+        }
+        &:nth-child(5) {
+            display: none;
+        }
+        &:nth-child(6) {
+            display: none;
+        }
+    }
+}
+
+.inmobiliaria-terrenos {
+    background-color: #0a0a0a;
+}
+
+.inmobiliaria-terrenos-cards {
+    display: grid;
+    grid-template-areas:
+    "terreno1 terreno2"
+    "terreno3 terreno3"
+    "terreno3 terreno3";
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    & .inmobiliaria-terrenos-item {
+        & img {
+            width: 100%;
+        }
+        & p {
+            font-size: 0.825rem;
+            font-weight: 700;
+            margin: 0;
+            &:nth-child(2) {
+                font-size: 0.75rem;
+                font-weight: 500;
+            }
+        }
+        & div:nth-child(2) {
+            padding: 0.25rem 0.5rem;
+            margin-top: 0.7rem;
+        }
+        &:nth-child(odd){
+            & div:nth-child(2) {
+                background-color: #b6b616;
+            }
+        }
+        &:nth-child(even){
+            & div:nth-child(2) {
+                background-color: $third-color;
+            }
+        }
+        &:nth-child(1) {
+            grid-area: terreno1;
+        }
+        &:nth-child(2) {
+            grid-area: terreno2;
+        }
+        &:nth-child(3) {
+            grid-area: terreno3;
+        }
+        &:nth-child(4) {
+            display: none;
+        }
+        &:nth-child(5) {
+            display: none;
+        }
+        &:nth-child(6) {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .inmobiliaria-header-container {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 2rem 0.75rem min(40vw, 560px);
+        & .inmobiliaria-header-bloque {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding: 1.5rem 0 0;
+            text-align: left;
+            margin-right: auto;
+            & h2 {
+                display: block;
+                font-size: min(5vw, 70px);
+            }
+            & p {
+                font-size: min(2.15vw, 30.5px);
+            }
+            & a {
+                font-size: min(2.15vw, 30.5px);
+                width: fit-content;
+            }
+        }
+        & .inmobiliaria-logo {
+            padding: 0;
+            position: relative;
+            text-align: center;
+            & img {
+                max-width: 350px;
+                position: absolute;
+                right: min(22vw,308px);
+                top: min(18vw, 252px);
+                width: 25vw;
+                &:nth-child(2){
+                    display: block;
+                    max-width: 420px;
+                    top: 0;
+                    right: 0;
+                    width: 30vw;
+                }
+            }
+        }
+    }
+
+    .inmobiliaria-casas-cards {
+        grid-template-areas:
+        "casa1 casa2 casa4 casa4"
+        "casa3 casa3 casa4 casa4"
+        "casa3 casa3 casa5 casa6";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+        & .inmobiliaria-casas-item {
+            &:nth-child(1) {
+                grid-area: casa1;
+            }
+            &:nth-child(2) {
+                grid-area: casa2;
+            }
+            &:nth-child(3) {
+                grid-area: casa3;
+            }
+            &:nth-child(4) {
+                display: grid;
+                grid-area: casa4;
+            }
+            &:nth-child(5) {
+                display: grid;
+                grid-area: casa5;
+            }
+            &:nth-child(6) {
+                display: grid;
+                grid-area: casa6;
+            }
+        }
+    }
+
+    .inmobiliaria-terrenos-cards {
+        grid-template-areas:
+        "terreno1 terreno2 terreno4 terreno4"
+        "terreno3 terreno3 terreno4 terreno4"
+        "terreno3 terreno3 terreno5 terreno6";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+        & .inmobiliaria-terrenos-item {
+            &:nth-child(1) {
+                grid-area: terreno1;
+            }
+            &:nth-child(2) {
+                grid-area: terreno2;
+            }
+            &:nth-child(3) {
+                grid-area: terreno3;
+            }
+            &:nth-child(4) {
+                display: grid;
+                grid-area: terreno4;
+            }
+            &:nth-child(5) {
+                display: grid;
+                grid-area: terreno5;
+            }
+            &:nth-child(6) {
+                display: grid;
+                grid-area: terreno6;
+            }
+        }
+    }
+}
